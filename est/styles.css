@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
+}
+
+body {
+    background-color: #1e1e1e; /* Dark background for better contrast */
+    color: #fff; /* White text color */
+    font-family: 'Roboto', sans-serif; /* Roboto font for clean and modern look */
+    background-image: url('https://i.pinimg.com/originals/12/90/4d/12904dabe99a268536a8a674d045caa3.jpg'); /* Add background image */
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background image stay in place */
+}
+
+#lyrics {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+#lyrics div {
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, text-shadow 1s ease-in-out;
+    animation: fadeIn 1s forwards, zoomIn 0.5s forwards, shadowIn 3s forwards 1s;
+}
+
+#lyrics div:nth-child(odd) {
+    font-style: italic;
+}
+
+#lyrics div:nth-child(even) {
+    font-weight: bold;
+    background: -webkit-linear-gradient(#eee, #fffb0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+@keyframes shadowIn {
+    0%, 100% { text-shadow: none; }
+    50% { text-shadow: 2px 2px 4px #000; }
+}
