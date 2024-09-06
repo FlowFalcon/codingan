@@ -1,0 +1,49 @@
+body {
+    background: url('https://images.hdqwalls.com/download/blue-archive-hm-2560x1700.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: rgb(98, 0, 255);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #5ce0f1;
+}
+
+canvas {
+    background-color: #8b00c2;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #1100ff;
+}
+
+.controls {
+    margin: 20px 0;
+        color: #00ffff;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+p {
+    color: #f4f4f4;
+    margin-top: 20px;
+}
+
+canvas {
+    background-color: #083e5e;
+    border: 2px solid #01eeff;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+}
+
+canvas.grid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
