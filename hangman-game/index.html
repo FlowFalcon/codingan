@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hangman-Game</title>
+	<link rel="stylesheet" href="./css/all.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+		media="screen" />
+	<link rel="stylesheet" href="./css/all.css">
+	<script src="https://kit.fontawesome.com/ec98f7a980.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>Hangman😈</h1>
+	<p>Cari Kata Tersembunyi - Lalu Masukkan Huruf</p>
+	<div class="game-container">
+		<svg height="250" width="200" class="figure-container">
+			<!-- penggantung -->
+			<!-- tiang kesamping -->
+			<line x1="60" y1="20" x2="140" y2="20" />
+			<line x1="55" y1="15" x2="145" y2="15" />
+
+			<!-- tiang ke bawah -->
+			<line x1="140" y1="20" x2="140" y2="50" />
+			<line x1="145" y1="15" x2="145" y2="50" />
+
+			<!-- tiang atas bawah -->
+			<line x1="60" y1="20" x2="60" y2="230" />
+			<line x1="55" y1="15" x2="55" y2="230" />
+
+			
+			<!-- kaki atau base -->
+			<line x1="20" y1="230" x2="100" y2="230" />
+			<line x1="20" y1="235" x2="100" y2="235" />
+			<line x1="20" y1="240" x2="100" y2="240" />
+			<line x1="20" y1="245" x2="100" y2="245" />
+
+			<!-- kepala -->
+			<circle cx="140" cy="70" r="20" class="figure-part" />
+			<!-- badan -->
+			<line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+			<!-- lengan -->
+			<line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+			<line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+			<!-- kaki -->
+			<line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+			<line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+
+		</svg>
+
+		<div class="wrong-letters-container">
+			<div id="wrong-letters"></div>
+
+		</div>
+
+
+
+
+		<div class="word" id="word"></div>
+	</div>
+
+	<!-- container untuk pesan akhir -->
+	<div class="popup-container" id="popup-container">
+		<div class="popup">
+			<h2 id="final-message"></h2>
+			<button id="play-button">Play Again</button>
+		</div>
+	</div>
+
+	<!-- notifikasi -->
+	<div class="notification-container " id="notification-container">
+		<p>Kamu telah mengetik huruf ini</p>
+	</div>
+
+
+	<script src="./js/all.min.js"></script>
+	<script src="./js/all.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

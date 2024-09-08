@@ -1,0 +1,267 @@
+ @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+ * {
+   box-sizing: border-box;
+   font-family: 'Creepster',
+     cursive;
+
+ }
+
+ body {
+   background-color: #3a3d41;
+   color: #fff;
+   font-family: Roboto, sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 80vh;
+   margin: 0;
+   overflow: hidden;
+ }
+
+ h1 {
+   margin: 20px 0 0;
+   color: rgb(197, 4, 4);
+   font-family: 'Creepster',
+     cursive;
+   font-size: 5em;
+ }
+
+ p {
+   font-family: 'Creepster',
+     cursive;
+
+ }
+
+ .game-container {
+   padding: 20px 30px;
+   position: relative;
+   margin: auto;
+   min-height: 450px;
+   min-width: 70%;
+ }
+
+ .figure-container {
+   fill: transparent;
+   stroke: #fff;
+   stroke-width: 4px;
+   stroke-linecap: round;
+   transform: scale(2);
+ }
+
+ .figure-part {
+   display: none;
+   stroke: rgb(197, 4, 4);
+ }
+
+ .wrong-letters-container {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: right;
+   color: rgb(197, 4, 4);
+   font-family: 'Creepster',
+     cursive;
+   width: 100%;
+
+
+
+ }
+
+ .wrong-letters-container p {
+   margin: 0 0 5px;
+   font-size: 2em;
+   text-decoration: underline;
+
+ }
+
+ .wrong-letters-container span {
+   font-size: 4em;
+ }
+
+ .word {
+   display: flex;
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ .letter {
+   border-bottom: 3px solid #fff;
+   display: inline-flex;
+   font-size: 30px;
+   align-items: center;
+   justify-content: center;
+   margin: 0 3px;
+   height: 50px;
+   width: 20px;
+ }
+
+ .popup-container {
+   background-color: rgba(0, 0, 0, 0.3);
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Creepster',
+     cursive;
+
+ }
+
+ .popup {
+   background-color: rgb(197, 4, 4);
+   border-radius: 5px;
+   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   text-align: center;
+ }
+
+ .popup button {
+   cursor: pointer;
+   background-color: #fff;
+   color: rgb(197, 4, 4);
+   border: 0;
+   margin-top: 20px;
+   padding: 12px 20px;
+   font-size: 16px;
+ }
+
+ .popup button:active {
+   transform: scale(0.98);
+ }
+
+ .popup button:focus {
+   outline: 0;
+ }
+
+ .notification-container {
+   background-color: rgba(0, 0, 0, 0.3);
+   border-radius: 10px 10px 0 0;
+   padding: 15px 20px;
+   position: absolute;
+   bottom: -50px;
+   transition: transform 0.3s ease-in-out;
+ }
+
+ .notification-container p {
+   margin: 0;
+ }
+
+ .notification-container.show {
+   transform: translateY(-50px);
+ }
+
+
+
+ .social {
+   display: flex;
+   position: absolute;
+   flex-direction: column;
+   top: 120px;
+   right: 0;
+
+ }
+
+ .social a .fa-2x {
+   color: #fff;
+   margin: 5px;
+ }
+
+ .social a .fa-2x:hover {
+   color: rgb(197, 4, 4);
+   margin: 5px;
+ }
+
+ @media(min-height:600px) {
+   .game-container {
+     top: 100px;
+     padding: 20px 30px;
+     position: relative;
+     margin: auto;
+     height: 390px;
+     width: 100%;
+     padding: 0 106px;
+   }
+
+   .wrong-letters-container {
+     padding: 0 86px;
+
+   }
+
+   .social {
+     padding: 0 86px;
+
+   }
+
+   #wrong-letters span {
+     font-size: 1.2em;
+   }
+
+   .word {
+     top: 270px;
+   }
+ }
+
+ @media(max-width:450px) {
+   h1 {
+     text-align: center;
+     font-size: 3.4em;
+   }
+
+   .game-container {
+     padding: 20px 30px;
+     position: relative;
+     margin: auto;
+     height: 390px;
+     width: 100%;
+   }
+
+   .figure-container {
+     fill: transparent;
+     stroke: #fff;
+     stroke-width: 4px;
+     stroke-linecap: round;
+     transform: scale(1);
+   }
+
+   .wrong-letters-container p {
+     margin: 0 0 5px;
+     font-size: 1em;
+     text-decoration: underline;
+
+   }
+
+   .wrong-letters-container span {
+     font-size: 2em;
+   }
+
+   .social {
+     display: flex;
+     position: absolute;
+     right: 0;
+     flex-direction: column;
+     top: 120px;
+   }
+
+   .social a .fa-2x {
+     color: #fff;
+     margin: 5px;
+     font-size: 1em;
+   }
+
+   .word {
+     top: 270px;
+   }
+
+   #wrong-letters span {
+     font-size: 1.2em;
+   }
+ }
